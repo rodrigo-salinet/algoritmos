@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Algoritmos</title>
+    </head>
+    <body>
+        Frontend
+        
+        <!-- backend -->
+        <!-- <script src="./algoritmos.js"></script> -->
+        <!-- <script src="./switchcase.js"></script> -->
+        <!-- <script src="./trycatch.js"></script> -->
+        <!-- <script src="./while.js"></script> -->
+        <!-- <script src="./for.js"></script> -->
+        <!-- <script src="./if.js"></script> -->
+        <script>
+            function binarySearch(arr, target) {
+                let left = 0;
+                let right = arr.length - 1;
+
+                while (left <= right) {
+                    let mid = Math.floor((left + right) / 2);
+                    if (arr[mid] === target) {
+                        return mid; // Elemento encontrado
+                    } else if (arr[mid] < target) {
+                        left = mid + 1;
+                    } else {
+                        right = mid - 1;
+                    }
+                }
+
+                return -1; // Elemento não encontrado
+            }
+
+            let sortedArr = [11, 12, 22, 25, 34, 64, 90];
+            let target = 25;
+            let result = binarySearch(sortedArr, target);
+
+            console.log(`O elemento ${target} está no índice ${result}`);
+
+        </script>
+
+    </body>
+</html>
